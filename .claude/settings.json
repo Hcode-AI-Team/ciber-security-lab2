@@ -1,14 +1,30 @@
 {
+  "//": "Encontro 4 — guardrails em camadas. Camada 2 (permissões) + camada 3 (hook).",
+  "permissions": {
+    "deny": [
+      "Read(./backend/.env)",
+      "Read(./**/*.pem)",
+      "Read(./**/*.key)",
+      "Bash(git push:*)"
+    ],
+    "ask": [
+      "Bash(git commit:*)",
+      "Bash(rm:*)"
+    ],
+    "allow": [
+      "Bash(npm run test:*)",
+      "Bash(npm run lint:*)",
+      "Bash(npm run build:*)"
+    ]
+  },
   "hooks": {
-    "PostToolUse": [
+    "PreToolUse": [
       {
-        "matcher": "Bash|PowerShell",
+        "matcher": "*",
         "hooks": [
           {
             "type": "command",
-            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/documentacao-automatica.mjs\"",
-            "timeout": 30,
-            "statusMessage": "Verificando se a documentação está em dia..."
+            "command": "node ${CLAUDE_PROJECT_DIR}/.claude/hooks/proteger-contexto.mjs"
           }
         ]
       }

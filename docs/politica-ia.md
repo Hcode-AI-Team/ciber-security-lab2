@@ -3,7 +3,7 @@
 > Uma página. É o que a TI mostra ao cliente/auditor quando perguntarem se a
 > Combio usa IA (Claude Code, Copilot) com segurança. Preencha os `<campos>`.
 >
-> Versão: `<v1 — AAAA-MM-DD>` · Responsável: `<nome / papel>` · Revisão: `<trimestral>`
+> Versão: `<v1 — 2026-11-04>` · Responsável: `<Glaucio Daniel / Software Engineer>` · Revisão: `<trimestral>`
 
 ## 1. Pode (uso incentivado)
 
@@ -35,12 +35,12 @@
 
 ## 4. Escalonamento (caso urgente)
 
-| Situação | Ação imediata | Quem avisar |
-|---|---|---|
-| Segredo vazou em PR/commit | Revogar/rotacionar a credencial; remover do histórico | `<Cyber / TI>` |
-| Varredura agendada achou **crítico** | Issue automática aberta → tratar antes da GMUD | `<dono do sistema>` |
-| Suspeita de prompt injection em repo | Não executar; reportar o arquivo | `<Cyber>` |
-| Dado pessoal exposto | Conter, avaliar impacto LGPD | `<encarregado/DPO>` |
+| Situação                             | Ação imediata                                         | Quem avisar         |
+| ------------------------------------ | ----------------------------------------------------- | ------------------- |
+| Segredo vazou em PR/commit           | Revogar/rotacionar a credencial; remover do histórico | `<Cyber / TI>`      |
+| Varredura agendada achou **crítico** | Issue automática aberta → tratar antes da GMUD        | `<dono do sistema>` |
+| Suspeita de prompt injection em repo | Não executar; reportar o arquivo                      | `<Cyber>`           |
+| Dado pessoal exposto                 | Conter, avaliar impacto LGPD                          | `<encarregado/DPO>` |
 
 ## 5. Base
 
@@ -48,4 +48,5 @@ OWASP Top 10:2025 · OWASP Top 10 for LLM Applications 2025 · LGPD (Lei
 13.709/2018, art. 5º, 6º, 7º, 11) · fluxo GMUD interno da Combio.
 
 ---
+
 _Aprovada por `<liderança de TI>` em `<data>`. Próxima revisão: `<data>`._
