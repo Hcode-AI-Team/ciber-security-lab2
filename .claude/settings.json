@@ -7,10 +7,7 @@
       "Read(./**/*.key)",
       "Bash(git push:*)"
     ],
-    "ask": [
-      "Bash(git commit:*)",
-      "Bash(rm:*)"
-    ],
+    "ask": ["Bash(git commit:*)", "Bash(rm:*)"],
     "allow": [
       "Bash(npm run test:*)",
       "Bash(npm run lint:*)",
@@ -24,7 +21,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node ${CLAUDE_PROJECT_DIR}/.claude/hooks/proteger-contexto.mjs"
+            "command": "node .claude/hooks/proteger-contexto.mjs"
           }
         ]
       }
